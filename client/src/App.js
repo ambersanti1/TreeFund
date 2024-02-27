@@ -3,12 +3,16 @@ import './App.css';
 import Checkout from './components/Checkout'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
+import Hero from './components/Hero'
+import Accordion from './components/Accordion'
 
 function App() {
   return (
     <div className="App">
       <Navbar/>
-      <Home/>
+      <Hero/>
+      <Accordion/>
+      <Home />
 
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

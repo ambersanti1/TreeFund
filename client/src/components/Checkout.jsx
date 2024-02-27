@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 const Checkout = ({ cartItems }) => {
   const handleCheckout = () => {
     // const user = useSelector((state) => state.auth);
-    // cartItems = [{id: 1, name: "Nature Savior", description: "10 trees", price: 400}]
+    cartItems = [{id: 1, name: "Nature Savior", description: "10 trees", price: 400}]
     axios
       .post("http://localhost:5000/api/stripe/create-checkout-session", {
         cartItems,
