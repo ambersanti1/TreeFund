@@ -4,11 +4,19 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const stripe = require("./routes/stripe");
 const products = require("./products");
-
+const userRouter = require("./routes/user");
+const cookieParser = require('cookie-parser')
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:3000'],
+  credentials: true,
+}));
+app.use(cookieParser())
+app.use("/auth", userRouter);
+
+mongoose.connect("mongodb://localhost:27017/authentication");
 
 app.use("/api/stripe", stripe);
 
