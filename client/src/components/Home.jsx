@@ -16,7 +16,7 @@ function Home() {
       <h1>Packages</h1>
       <ul>
         {data.map((product) => (
-          <div key={product.id}>
+          <div key={product.id} >
             <h3>{product.name}</h3>
             <p>{product.description}</p>
             <p>{product.price}</p>
