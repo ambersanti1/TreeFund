@@ -24,8 +24,12 @@ function Home() {
 
   return (
     <div>
-      <h1>Join the Reforestation Revolution</h1>
-      <p> Embrace the power of unity and nature with TreeFund. Together, we can reforest the earth, one seedling at a time. Dive into a world where your contributions directly foster growth, rebuild ecosystems, and combat climate change. Let's nurture our planet back to life, creating a legacy of greenery for future generations.</p>
+      <div className="container-text">
+        <div className="Home-text">
+          <h1>Join the Reforestation Revolution</h1>
+          <p> Embrace the power of unity and nature with TreeFund. Together, we can reforest the earth, one seedling at a time. Dive into a world where your contributions directly foster growth, rebuild ecosystems, and combat climate change. Let's nurture our planet back to life, creating a legacy of greenery for future generations.</p>
+        </div>
+      </div>
 
       <ul className="product-list">
         {data.map((product) => (

@@ -1,3 +1,14 @@
+.container-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.Home-text {
+  max-width: 100%; 
+  text-align: left; 
+}
+
 .product-list {
   list-style: none;
   display: flex;
@@ -12,6 +23,12 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
   width: 300px; 
   overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.product-card.hover {
+  transform: translateY(-5px) scale(1.05); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .product-name {
@@ -24,7 +41,6 @@
 }
 
 .product-image {
-  display: block;
   width: 90%;
   height: 250px; 
   object-fit: cover; 
