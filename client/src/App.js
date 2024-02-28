@@ -4,8 +4,9 @@ import Signup from "./components/Signup";
 import Login from "./components/Login";
 import NavbarAndHome from "./components/Combined";
 import "react-toastify/dist/ReactToastify.css";
-// import Hero from './components/Hero'
-// import Accordion from './components/Accordion'
+import Hero from './components/Hero'
+import Accordion from './components/Accordion'
+
 
 function App() {
   return (

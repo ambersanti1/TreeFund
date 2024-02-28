@@ -4,18 +4,21 @@ const products = [
     name: "Tree Huger",
     description: "Plant three trees",
     price: 20,
+    imageName: "TreeHuger.webp",
   },
   {
     id: 2,
     name: "Nature Savior",
-    description: "Plant six threes",
+    description: "Plant six trees",
     price: 40,
+    imageName: "NatureSaviorImage.webp",
   },
   {
     id: 3,
     name: "Evergreen Enthusiast",
-    description: "Plant nine threes",
+    description: "Plant nine trees",
     price: 60,
+    imageName: "EvergreenEnthusiastImage.webp",
   },
 ];
 
