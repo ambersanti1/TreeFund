@@ -22,7 +22,7 @@ const Signup = () => {
       .then((response) => {
         if (response.data.status) {
           toast.success("Successfully sign up", {
-            position: "top-right",
+            position: "bottom-left",
             autoClose: 2000,
             hideProgressBar: false,
             closeButton: false,
@@ -33,7 +33,7 @@ const Signup = () => {
           }, 2000);
         } else {
           toast.error("Failed to sign up", {
-            position: "top-right",
+            position: "bottom-left",
             autoClose: 2000,
             hideProgressBar: false,
             closeButton: false,
