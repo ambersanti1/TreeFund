@@ -1,5 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Checkout from "./Checkout";
+import '../styles/Home.css';
+
+import TreeHugerImage from '../Images/TreeHugerImage.webp';
+import NatureSaviorImage from '../Images/NatureSaviorImage.webp';
+import EvergreenEnthusiastImage from '../Images/EvergreenEnthusiastImage.webp';
+
+const imageMap = {
+  "Tree Huger": TreeHugerImage,
+  "Nature Savior": NatureSaviorImage,
+  "Evergreen Enthusiast": EvergreenEnthusiastImage,
+};
 
 function Home() {
   const [data, setData] = useState([]);
@@ -13,15 +24,18 @@ function Home() {
 
   return (
     <div>
-      <h1>Packages</h1>
-      <ul>
+      <h1>Join the Reforestation Revolution</h1>
+      <p> Embrace the power of unity and nature with TreeFund. Together, we can reforest the earth, one seedling at a time. Dive into a world where your contributions directly foster growth, rebuild ecosystems, and combat climate change. Let's nurture our planet back to life, creating a legacy of greenery for future generations.</p>
+
+      <ul className="product-list">
         {data.map((product) => (
-          <div key={product.id}>
-            <h3>{product.name}</h3>
-            <p>{product.description}</p>
-            <p>{product.price}</p>
-            <Checkout cartItems = {[product]}/>
-          </div>
+          <li key={product.id} className="product-card">
+            <h3 className="product-name">{product.name}</h3>
+            <img className="product-image"  src={imageMap[product.name] || TreeHugerImage} alt={product.name} />
+            <p className="product-description">{product.description}</p>
+            <p className="product-price">${product.price}</p>
+            <Checkout cartItems={[product]} />
+          </li>
         ))}
       </ul>
     </div>
