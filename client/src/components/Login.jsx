@@ -5,13 +5,12 @@ import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
 const Login = () => {
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const navigate = useNavigate();
 
-  axios.defaults.withCredentials = true;
+  // axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -29,7 +28,7 @@ const Login = () => {
             theme: "colored",
           });
           setTimeout(() => {
-            navigate("/home");
+            navigate("/dashboard");
           }, 2000);
         } else {
           toast.error("Failed to logged in", {
@@ -66,6 +65,7 @@ const Login = () => {
         />
 
         <button type="submit">Login</button>
+        <Link to="/forgotPassword">Forgot Password?</Link>
         <p>
           Don't have an account? <Link to="/signup">Sign up</Link>
         </p>
