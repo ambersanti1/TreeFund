@@ -1,9 +1,10 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
-const jwt = require('jsonwebtoken')
+const jwt = require("jsonwebtoken");
 const { User } = require("../models/User");
-require('dotenv').config()
+require("dotenv").config();
+const nodemailer = require("nodemailer");
 
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
@@ -28,14 +29,97 @@ router.post("/login", async (req, res) => {
   if (!user) {
     return res.json({ message: "User is not registered" });
   }
-  const validPassword = await bcrypt.compare(password, user.password)
-  if(!validPassword) {
-    return res.json({message: "Password is incorrect"})
+  const validPassword = await bcrypt.compare(password, user.password);
+  if (!validPassword) {
+    return res.json({ message: "Password is incorrect" });
   }
 
-  const token = jwt.sign({username: user.username}, process.env.JWT_SECRET_KEY, {expiresIn: '1h'})
-  res.cookie('token', token, {httpOnly: true, maxAge: 360000})
-  return res.json({status: true, message: 'Login succesfully'})
+  const token = jwt.sign(
+    { username: user.username },
+    process.env.JWT_SECRET_KEY,
+    { expiresIn: "1h" }
+  );
+  res.cookie("token", token, { httpOnly: true, maxAge: 360000 });
+  return res.json({ status: true, message: "Login succesfully" });
 });
 
+router.post("/forgot-password", async (req, res) => {
+  const { email } = req.body;
+  try {
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.json({ message: "User not registered" });
+    }
+
+    const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET_KEY, {
+      expiresIn: "5m",
+    });
+
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "carolinasandoval879@gmail.com",
+        pass: "ofip vhbo spyb ffwm",
+      },
+    });
+
+    const encodedToken = encodeURIComponent(token).replace(/\./g, "%2E");
+
+    const mailOptions = {
+      from: "carolinasandoval879@gmail.com",
+      to: email,
+      subject: "Reset password",
+      text: `http://localhost:3000/resetPassword/${encodedToken}`,
+    };
+
+    transporter.sendMail(mailOptions, function (error, info) {
+      if (error) {
+        return res.json({ message: "Error sending email" });
+      } else {
+        return res.json({ status: true, message: "Email sent" });
+      }
+    });
+  } catch (err) {
+    console.log(err);
+  }
+});
+
+router.post("/reset-password/:token", async (req, res) => {
+  const { token } = req.params;
+  const { password } = req.body;
+
+  try {
+    const decoded = await jwt.verify(token, process.env.JWT_SECRET_KEY);
+    const id = decoded.id;
+    const hashPassword = await bcrypt.hash(password, 10);
+    await User.findByIdAndUpdate({ _id: id }, { password: hashPassword });
+    return res.json({ status: true, message: "Updated password" });
+  } catch (error) {
+    return res.json("Invalid token");
+  }
+});
+
+const verifyUser = async (req, res, next) => {
+  try {
+    const token = req.cookies.token;
+    if (!token) {
+      return res.json({ status: false, message: "No token" });
+      console.log('Denied');
+    }
+    const decoded = await jwt.verify(token, process.env.JWT_SECRET_KEY);
+    next();
+  } catch (error) {
+    return res.json(error);
+  }
+};
+
+router.get("/verify", verifyUser, (req, res) => {
+  return res.json({ status: true, message: "Authorized" });
+  console.log('Authorized');
+});
+
+router.get('/logout', (req, res) => {
+  res.clearCookie('token')
+  return res.json({status: true })
+})
 module.exports = router;
