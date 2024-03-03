@@ -71,27 +71,15 @@
   visibility: visible;
 }
 
+.subtitle p {
+  color: black;
+}
+
 /* Smaller Screens and Devices */
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 768px) {
   .accordion {
-    flex-direction: column; 
-    height: auto; 
-  }
-
-  .accordion li {
-    flex: none; 
-    width: 100%; 
-    height: auto; 
-    margin-bottom: 10px; 
-  }
-
-  .accordion li:nth-of-type(n+3) {
     display: none;
   }
-
-  .accordion li img {
-    height: auto; 
-  }
-
 }
+
