@@ -1,27 +1,6 @@
-.Subtitle {
-  text-align: left;
-  margin-left: 210px;
-  margin-right: 210px;
-  padding-bottom: 20px;
-}
-
-
-main {
-  min-height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-left: 190px;
-  margin-right: 210px;
-
-}
-
 .accordion{
   width: 100%;
   display: flex;
-  justify-content: left;
   height: 500px;
   gap: 10px;
 }
@@ -30,14 +9,14 @@ main {
   gap: 12px;
 }
 
-.accordion h2 {
+.content h2 {
   font-weight: 600;
   font-size: 24px;
   line-height: 45px;
-  border-bottom: 
-    2px solid #fff;
+  border-bottom: 2px solid white;
   white-space: nowrap;
   background: rgba(0, 0, 0, 0.399);
+  padding: 15px;
 }
 
 .accordion li {
@@ -65,7 +44,7 @@ main {
   transition: 0.8s;
 }
 
-.accordion li .content {
+.content {
   position: absolute;
   top: 50;
   right: 0;
@@ -73,8 +52,10 @@ main {
   bottom: 0;
   z-index: 1;
   color: rgb(255, 255, 255);
-  padding: 5px;
+  padding: 10px;
   opacity: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .accordion li:hover {
@@ -89,3 +70,4 @@ main {
   opacity: 1;
   visibility: visible;
 }
+

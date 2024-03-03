@@ -1,0 +1,24 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; 
+  padding: 10px 20px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.navbar-brand {
+  color: green; 
+  margin: 0; 
+  font-size: 2.5em; 
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  width: 48px; 
+  height: auto; 
+}

@@ -1,17 +1,15 @@
+import '../styles/Navbar.css'; 
+import userIcon from '../Images/UserIcon.png';
+
 const Navbar = () => {
   return (
-    <header className="navbar">
-      <div className="navbar__toggle" id="mobile-menu">
-        <span className="bar"></span>
-        <span className="bar"></span>
-        <span className="bar"></span>
+    <nav className="navbar">
+      <h1 className="navbar-brand">TreeFund</h1>
+      <div className="navbar-user">
+        <img src={userIcon} alt="User" className="user-icon" />
       </div>
-      <div className="navbar__logo">
-        <h1>TreeFund</h1>
-      </div>
-    </header>
+    </nav>
   );
 };
 
 export default Navbar;
-

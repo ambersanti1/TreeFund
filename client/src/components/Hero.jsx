@@ -3,7 +3,7 @@ import '../styles/Hero.css'
 
 const Hero = () => {
   return (
-    <div className="hero-container">
+    <div>
       <h1>
         Planting Today, for a Greener Tomorrow.
       </h1>
