@@ -1,35 +1,26 @@
 .App {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start; 
   align-items: center;
-  min-height: 100vh; /* Full viewport height */
-  text-align: center; /* Ensures that text is centered within its container */
-  background-color: #ffffff; /* Optional: background color for the app */
+  min-height: 100vh;
+  padding: 0 20px; 
+  background-color: white; 
 }
 
-/* Make sure body has no margin to ensure full height alignment */
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+.content-container {
+  width: 100%; /* Full width of the element */
+  max-width: 90%; 
+  margin: 0 auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
 }
 
-/* React-Router Link styles */
-a {
-  text-decoration: none;
-  color: white; /* Optional: color for your links */
-}
-
-/* This will apply to all direct children of .App that are also containers */
-.App > * {
-  width: 100%; /* Full width */
-  max-width: 960px; /* Maximum width of the content */
-  box-sizing: border-box; /* Includes padding and border in the element's width and height */
-  padding: 20px; /* Optional: padding inside the containers */
-}
-
-/* Additional global styles */
-* {
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif; /* Optional: your preferred font */
+/* Additional styles for individual components */
+.NavbarAndHome, .Signup, .Login, .ForgotPassword, .ResetPassword, .Dashboard {
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px; 
+  box-sizing: border-box; 
 }
