@@ -77,10 +77,16 @@ const Signup = () => {
         />
 
         <button type="submit">Sign Up</button>
-        <p>
-          Have an Account? <Link to="/login">Login</Link>
-        </p>
-      <ToastContainer/>
+
+        <div className="dont">
+          <p> Already have an account? </p>
+        </div>
+
+        <div className="user">
+          <Link to="/login">Log in</Link>
+        </div>
+
+        <ToastContainer />
       </form>
     </div>
   );
