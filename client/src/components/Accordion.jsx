@@ -23,23 +23,23 @@ const Accordion = () => {
     window.addEventListener('resize', handleResize);
     handleResize();
     return () => window.removeEventListener('resize', handleResize);
-  }, []); 
+  }, []);
   const itemsToRender = windowWidth < 600 ? 2 : 10;
 
   // Images array to dynamically create list items
   const images = [
 
-    { src: manPlant, alt: "Man planting a tree", content: "Help plant trees!" }, 
-    { src: mexicanForest, alt: "A reforested mexican forest", content: "Be the future!" }, 
-    { src: havingFun, alt: "People Having Fun", content: "Secure the future!" }, 
-    { src: campingFamily, alt: "Preserve the Woods", content: "Enjoy Nature!" }, 
-    { src: plantingtrees, alt: "People Planting Trees", content: "Support the cause!" }, 
-    { src: dronePlant, alt: "Drone Tech", content: "Fund Innovation!" }, 
+    { src: manPlant, alt: "Man planting a tree", content: "Help plant trees!" },
+    { src: mexicanForest, alt: "A reforested mexican forest", content: "Be the future!" },
+    { src: havingFun, alt: "People Having Fun", content: "Secure the future!" },
+    { src: campingFamily, alt: "Preserve the Woods", content: "Enjoy Nature!" },
+    { src: plantingtrees, alt: "People Planting Trees", content: "Support the cause!" },
+    { src: dronePlant, alt: "Drone Tech", content: "Fund Innovation!" },
     { src: irrigationTrees, alt: "Irrigation Tech", content: "Help grow life!" },
-    { src: reforestTrees, alt: "Reforest process", content: "Donate trees today!" }, 
-    { src: plantationTrees, alt: "Plantation in process", content: "Help us plant!" }, 
-    { src: farTrees, alt: "A reforest process drone shot", content: "Change the World!" } 
-  
+    { src: reforestTrees, alt: "Reforest process", content: "Donate trees today!" },
+    { src: plantationTrees, alt: "Plantation in process", content: "Help us plant!" },
+    { src: farTrees, alt: "A reforest process drone shot", content: "Change the World!" }
+
   ];
 
   return (
@@ -61,6 +61,10 @@ const Accordion = () => {
           ))}
         </ul>
       </main>
+
+      <h1>Donate now!</h1>
+      <p> Consider helping us fulfill our goal of 500 acres of trees planted this month. </p>
+
     </>
   );
 };

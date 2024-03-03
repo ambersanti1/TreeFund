@@ -5,6 +5,8 @@
   display: flex;
   height: 500px;
   gap: 10px;
+  margin-left: -45px;
+  margin-top: 30px;
 }
 
 .accordion.hover{
