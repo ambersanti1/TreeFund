@@ -10,91 +10,68 @@ import reforestTrees from '../Images/Reforest_trees.webp'
 import plantationTrees from '../Images/Plantation_trees.webp'
 import farTrees from '../Images/Far_trees.webp'
 
+import React, { useState, useEffect } from 'react';
 
 const Accordion = () => {
+  // State to hold the window width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width to the state
+      setWindowWidth(window.innerWidth);
+    }
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect is only run on mount and unmount
+
+  // Determine the number of items to render based on window width
+  const itemsToRender = windowWidth < 600 ? 2 : 10;
+
+  // Images array to dynamically create list items
+  const images = [
+
+    { src: manPlant, alt: "Man planting a tree", content: "Help plant trees!" }, 
+    { src: mexicanForest, alt: "A reforested mexican forest", content: "Be the future!" }, 
+    { src: havingFun, alt: "People Having Fun", content: "Secure the future!" }, 
+    { src: campingFamily, alt: "Preserve the Woods", content: "Enjoy Nature!" }, 
+    { src: plantingtrees, alt: "People Planting Trees", content: "Support the cause!" }, 
+    { src: dronePlant, alt: "Drone Tech", content: "Fund Innovation!" }, 
+    { src: irrigationTrees, alt: "Irrigation Tech", content: "Help grow life!" },
+    { src: reforestTrees, alt: "Reforest process", content: "Donate trees today!" }, 
+    { src: plantationTrees, alt: "Plantation in process", content: "Help us plant!" }, 
+    { src: farTrees, alt: "A reforest process drone shot", content: "Change the World!" } 
+  
+  ];
+
   return (
     <>
-      <div className='Subtitle' >
+      <div className='Subtitle'>
         <h1>Your Action, Natures Reaction.</h1>
-        <p> Unlock the power of change with every tree you plant. Witness the transformation</p>
+        <p>Unlock the power of change with every tree you plant. Witness the transformation</p>
       </div>
 
       <main>
         <ul className="accordion">
-          <li>
-            <img src={manPlant} alt="Man planting a tree" />
-            <div className="content">
-              <h2> Help plant trees! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={mexicanForest} alt="A reforested mexican forest" />
-            <div className="content">
-              <h2> Be the future! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={havingFun} alt="People Having fun" />
-            <div className="content">
-              <h2> Secure the future! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={campingFamily} alt="Preserve the woods!" />
-            <div className="content">
-              <h2> Enjoy nature! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={plantingtrees} alt="People Planting trees" />
-            <div className="content">
-              <h2> Support the cause! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={dronePlant} alt="Drone planting technology" />
-            <div className="content">
-              <h2> Fund innovation! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={irrigationTrees} alt="Irrigation technology" />
-            <div className="content">
-              <h2> Bring life back! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={reforestTrees} alt="A reforest forest process" />
-            <div className="content">
-              <h2> Donate seeds today! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={plantationTrees} alt="A reforest process" />
-            <div className="content">
-              <h2> Help us do this! </h2>
-            </div>
-          </li>
-
-          <li>
-            <img src={farTrees} alt="A reforest drone shot" />
-            <div className="content">
-              <h2> Change Mexico! </h2>
-            </div>
-          </li>
-
+          {images.slice(0, itemsToRender).map((image, index) => (
+            <li key={index}>
+              <img src={image.src} alt={image.alt} />
+              <div className="content">
+                <h2>{image.content}</h2>
+              </div>
+            </li>
+          ))}
         </ul>
       </main>
     </>
   );
 };
-
 export default Accordion;
