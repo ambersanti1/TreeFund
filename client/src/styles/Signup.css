@@ -30,6 +30,11 @@ input {
   outline: none; 
   box-shadow: inset 0 1px 2px rgba(0,0,0,0.1); 
   transition: ease all  0.6s; 
+  color: rgb(10, 65, 138);
+}
+
+input:focus{
+  color: black;
 }
 
 input:hover, input:focus {
@@ -50,4 +55,30 @@ button {
 button:hover {
   background-color: #004d00; 
   box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
+}
+
+.sign-up-form h2{
+  color: green;
+  font-size: x-large;
+}
+
+.Forgot a, .user a {
+  color: #3498db; 
+  text-decoration: none; 
+  font-size: small;
+}
+
+.Forgot a:hover, .user a:hover {
+  color: #2980b9; 
+  text-decoration: underline; 
+}
+
+.after-button{
+  margin-top: 10px;
+  transition: ease all 0.6s;
+}
+
+.dont {
+  margin-top: -5px;
+  margin-bottom: -15px;
 }

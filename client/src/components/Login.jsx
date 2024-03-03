@@ -47,7 +47,7 @@ const Login = () => {
   return (
     <div className="sign-up-container">
       <form className="sign-up-form" onSubmit={handleSubmit}>
-        <h2>Login</h2>
+        <h2>Log in</h2>
 
         <label htmlFor="email">Email:</label>
         <input
@@ -64,11 +64,24 @@ const Login = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button type="submit">Login</button>
-        <Link to="/forgotPassword">Forgot Password?</Link>
-        <p>
-          Don't have an account? <Link to="/signup">Sign up</Link>
-        </p>
+        <button type="submit">Log in</button>
+
+        <div className="after-button">
+
+          <div className="Forgot">
+            <Link to="/forgotPassword">Forgot Password?</Link>
+          </div>
+
+          <div className="dont">
+            <p> Don't have an account? </p>
+          </div>
+
+          <div className="user">
+            <Link to="/signup"> Sign up </Link>
+          </div>
+
+        </div>
+
       </form>
       <ToastContainer />
     </div>
