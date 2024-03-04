@@ -3,10 +3,13 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: white; 
 }
 
 .sign-up-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 300px;
   padding: 20px;
   border-radius: 8px;
@@ -14,15 +17,24 @@
   background-color: white; 
 }
 
-label {
+.sign-up-form label {
   display: block;
   margin-bottom: 8px;
   color: #333; 
+  font-size: 20px;
 }
 
-input {
+.sign-up-form p {
+  display: block;
+  margin-bottom: 8px;
+  color: #333; 
+  font-size: 20px;
+}
+
+.sign-up-form input {
   width: 100%;
   padding: 8px;
+  font-size: 20px;
   margin-bottom: 16px;
   box-sizing: border-box;
   border: 1px solid #e0e0e0; 
@@ -58,8 +70,8 @@ button:hover {
 }
 
 .sign-up-form h2{
+
   color: green;
-  font-size: x-large;
 }
 
 .Forgot a, .user a {
@@ -73,7 +85,14 @@ button:hover {
   text-decoration: underline; 
 }
 
+.forgot a{
+  margin: 10px 0 10px 0;
+}
 .after-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-top: 10px;
   transition: ease all 0.6s;
 }

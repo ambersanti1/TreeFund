@@ -18,7 +18,7 @@ const Checkout = ({ cartItems }) => {
   };
   return (
     <>
-      <button onClick={() => handleCheckout()}>Checkout</button>
+      <button onClick={() => handleCheckout()}>Donate</button>
     </>
   );
 };

@@ -20,7 +20,7 @@ const Login = () => {
       })
       .then((response) => {
         if (response.data.status) {
-          toast.success("Successfully logged in", {
+          toast.success("You've logged in", {
             position: "bottom-left",
             autoClose: 2000,
             hideProgressBar: false,

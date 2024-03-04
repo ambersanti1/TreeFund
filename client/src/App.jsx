@@ -1,13 +1,17 @@
 // App.js
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import NavbarAndHome from "./components/Combined";
+import "react-toastify/dist/ReactToastify.css";
+import Home from "./components/Home";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import ForgotPassword from "./components/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
 import Dashboard from "./components/Dashboard";
+import Footer from './components/Footer'
 import "./App.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   return (
@@ -15,7 +19,7 @@ function App() {
       <BrowserRouter>
         <div className="content-container">
           <Routes>
-            <Route path="/" element={<NavbarAndHome />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/signup" element={<Signup />}></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route path="/forgotPassword" element={<ForgotPassword />}></Route>
@@ -24,6 +28,7 @@ function App() {
           </Routes>
         </div>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }

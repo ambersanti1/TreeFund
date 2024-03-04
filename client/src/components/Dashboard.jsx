@@ -3,11 +3,14 @@ import Checkout from "./Checkout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
-import '../styles/dashboard.css'
+import "../styles/dashboard.css";
 
 import TreeHugerImage from "../Images/TreeHugerImage.webp";
 import NatureSaviorImage from "../Images/NatureSaviorImage.webp";
 import EvergreenEnthusiastImage from "../Images/EvergreenEnthusiastImage.webp";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 const imageMap = {
   "Tree Huger": TreeHugerImage,
@@ -58,28 +61,54 @@ function Dashboard() {
   }, []);
 
   return (
-    <div>
-      <button onClick={handleLogout}>Logout</button>
-
-      <h1>Join the Reforestation Revolution</h1>
-      <h1>Choose your package</h1>
-
-      <ul className="product-list">
-        {data.map((product) => (
-          <li key={product.id} className="product-card">
-            <h3 className="product-name">{product.name}</h3>
-            <img
-              className="product-image"
-              src={imageMap[product.name] || TreeHugerImage}
-              alt={product.name}
+    <div className="dashboard-container">
+      <div className="header-container">
+        <h1>TreeFund</h1>
+        <div>
+          <button className="logout" onClick={handleLogout}>
+            <a>Log out </a>
+            <FontAwesomeIcon
+              icon={faLeaf}
+              style={{
+                color: "#25511f",
+              }}
             />
-            <p className="product-description">{product.description}</p>
-            <p className="product-price">${product.price}</p>
-            <Checkout cartItems={[product]} />
-          </li>
-        ))}
-      </ul>
-      <ToastContainer />
+          </button>
+        </div>
+      </div>
+
+      <div className="dash-container">
+        <div className="title-container">
+          <h2 className="color-brown">JOIN </h2>
+          <br />
+          <h2 className="color-brown">THE </h2>
+          <br />
+          <h2>REFORESTATION</h2>
+          <br />
+          <h2>REVOLUTION</h2>
+          <br />
+        </div>
+
+        <div className="package-container">
+          <h2>Choose your package</h2>
+          <ul className="product-list">
+            {data.map((product) => (
+              <li key={product.id} className="product-card">
+                <h3 className="product-name">{product.name}</h3>
+                <img
+                  className="product-image"
+                  src={imageMap[product.name] || TreeHugerImage}
+                  alt={product.name}
+                />
+                <p className="product-description">{product.description}</p>
+                <p className="product-price">{product.price} USD</p>
+                <Checkout cartItems={[product]} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <ToastContainer />
+      </div>
     </div>
   );
 }

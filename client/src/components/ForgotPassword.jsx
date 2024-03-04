@@ -39,7 +39,7 @@ const ForgotPassword = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
 
-        <button type="submit">Send verification email</button>
+        <button type="submit">Send email</button>
       </form>
     </div>
   );

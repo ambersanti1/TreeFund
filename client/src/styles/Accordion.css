@@ -1,25 +1,29 @@
-
-
+.accordion-container {
+  display: flex;
+  flex-wrap: wrap;
+}
 .accordion{
   width: 100%;
   display: flex;
+  flex-direction: row;
+  justify-content: center;
   height: 500px;
   gap: 10px;
-  margin-left: -45px;
-  margin-top: 30px;
+  margin: 20px 0 20px 0;
 }
 
 .accordion.hover{
   gap: 12px;
 }
 
-.content h2 {
+.accordion .content h2 {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
+  color: white;
   line-height: 45px;
   border-bottom: 2px solid white;
   white-space: nowrap;
-  background: rgba(0, 0, 0, 0.399);
+  background: rgba(0, 0, 0, 0.4);
   padding: 15px;
 }
 

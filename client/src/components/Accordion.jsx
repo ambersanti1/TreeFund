@@ -38,18 +38,12 @@ const Accordion = () => {
     { src: irrigationTrees, alt: "Irrigation Tech", content: "Help grow life!" },
     { src: reforestTrees, alt: "Reforest process", content: "Donate trees today!" },
     { src: plantationTrees, alt: "Plantation in process", content: "Help us plant!" },
-    { src: farTrees, alt: "A reforest process drone shot", content: "Change the World!" }
+   
 
   ];
 
   return (
-    <>
-      <div className='Subtitle'>
-        <h1>Your Action, Natures Reaction.</h1>
-        <p>Unlock the power of change with every tree you plant. Witness the transformation</p>
-      </div>
-
-      <main>
+      <div className = "accordion-container">
         <ul className="accordion">
           {images.slice(0, itemsToRender).map((image, index) => (
             <li key={index}>
@@ -60,12 +54,7 @@ const Accordion = () => {
             </li>
           ))}
         </ul>
-      </main>
-
-      <h1>Donate now!</h1>
-      <p> Consider helping us fulfill our goal of 500 acres of trees planted this month. </p>
-
-    </>
+      </div>
   );
 };
 export default Accordion;

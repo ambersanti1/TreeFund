@@ -1,0 +1,25 @@
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: green;
+  width: 100%;
+  padding: 20px;
+}
+.footer-container h1{
+  color: white;
+}
+.footer-container h3{
+  font-size: small;
+  color: white;
+}
+.footer-container p{
+  font-size: x-small;
+  color: white;
+}
+
+.footer-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
