@@ -74,20 +74,17 @@ button:hover {
   color: green;
 }
 
-.Forgot a, .user a {
+.forgot a, .user a {
   color: #3498db; 
   text-decoration: none; 
   font-size: small;
 }
 
-.Forgot a:hover, .user a:hover {
+.forgot a:hover, .user a:hover {
   color: #2980b9; 
   text-decoration: underline; 
 }
 
-.forgot a{
-  margin: 10px 0 10px 0;
-}
 .after-button{
   display: flex;
   flex-direction: column;
@@ -98,6 +95,5 @@ button:hover {
 }
 
 .dont {
-  margin-top: -5px;
-  margin-bottom: -15px;
+  margin-top: 10px;
 }
