@@ -1,5 +1,34 @@
 # TreeFund: Planting Seeds of Change
 
+## Description
+
+Application that receives donations that support the reforestation in Mexico. 
+
+## Installation
+
+To install in the root folder run
+
+""
+npm i
+""
+To run the application in the root folder run
+""
+npm run start:dev
+""
+
+## Usage
+
+Open the application in heroku https://treefund-project-3e983225614c.herokuapp.com/
+
+## Images
+
+![image](https://github.com/ambersanti1/TreeFund/assets/115123137/89efbd32-5a0b-42ae-a676-4a1cae862e57)
+![image](https://github.com/ambersanti1/TreeFund/assets/115123137/d749f553-f5fb-42cd-b0df-c89f2d3dfff5)
+![image](https://github.com/ambersanti1/TreeFund/assets/115123137/de6e6706-3ec5-4b05-8041-78eead47a188)
+![image](https://github.com/ambersanti1/TreeFund/assets/115123137/b9933c6a-1e93-4fea-95ec-fb309778f89a)
+![image](https://github.com/ambersanti1/TreeFund/assets/115123137/2873e6c6-6600-4f8a-ab4a-2918066279dc)
+![image](https://github.com/ambersanti1/TreeFund/assets/115123137/b9cb9adb-8c13-4ca9-844f-120bae588db2)
+
 ## 🌳 Background
 
 In the heart of Mexico, amidst rising concerns over deforestation and pollution, TreeFund was born—a beacon of hope with a steadfast commitment to environmental conservation. Our vision is to ensure a greener tomorrow by preserving natural resources and championing sustainable living.
