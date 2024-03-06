@@ -8,13 +8,13 @@ Application that receives donations that support the reforestation in Mexico.
 
 To install in the root folder run
 
-""
+```
 npm i
-""
+```
 To run the application in the root folder run
-""
+```
 npm run start:dev
-""
+```
 
 ## Usage
 
