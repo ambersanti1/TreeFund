@@ -79,18 +79,18 @@ function Dashboard() {
 
       <div className="dash-container">
         <div className="title-container">
-          <h2 className="color-brown">JOIN </h2>
+          <h2 className="color-brown join">JOIN THE</h2>
           <br />
-          <h2 className="color-brown">THE </h2>
-          <br />
-          <h2>REFORESTATION</h2>
+          <h2>GREEN</h2>
           <br />
           <h2>REVOLUTION</h2>
           <br />
         </div>
 
         <div className="package-container">
-          <h2>Choose your package</h2>
+          <div class="choose">
+            <h2>Choose your package</h2>
+          </div>
           <ul className="product-list">
             {data.map((product) => (
               <li key={product.id} className="product-card">

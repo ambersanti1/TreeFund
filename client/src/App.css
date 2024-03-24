@@ -16,14 +16,15 @@
   margin: 0;
   padding:0;
 }
-.App {
+/* .App {
   display: flex;
   flex-direction: column;
   justify-content: flex-start; 
   align-items: center;
   min-height: 100vh;
   background-color: white; 
-}
+  width: 100%;
+} */
 
 .content-container {
   width: 100%; /* Full width of the element */

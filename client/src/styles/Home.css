@@ -1,31 +1,33 @@
 .header-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border-bottom: #9e9a41 solid 2px;
+  background-color: green;
 }
 
-.home-container .header-container h1 {
-  font-family: 'poppins-bold';
-  font-size: 70px;
-  margin:0px;
+.header-container h1 {
+  color: white;
+  padding-left: 20px;
+  font-family: 'poppins-light';
+  font-size: 50px;
+  margin:auto 0;
 }
-
-.home-container .header-container button {
+.header-container button {
   width: 6rem;
   margin: 1rem;
 }
 
-.home-container a {
+.header-container a {
   text-decoration: none;
 }
-
-.home-container .header-container h1 {
-  font-family: 'poppins-bold';
-  font-size: 70px;
-  margin:0px;
+.content-container a {
+  text-decoration: none;
 }
-
-
+.content-container .donate h2{
+  color: white;
+  text-decoration: none;
+}
 .join-donate-container {
   display: flex;
   flex-direction: row;
@@ -34,16 +36,13 @@
 
 .donate {
   background-color: green;
-  padding: 20px;
+  padding-left: 20px;
   border-radius: 5px;
+  cursor:pointer;
 }
 
-.home-container .donate h2 {
-  margin:0;
-  color: white;
-}
 
-.home-container .donate p{
+.content-container .donate p{
   color: white;
   font-size: 20px;
   margin: 10px;
@@ -55,11 +54,11 @@
   justify-content: flex-start;
 }
 
-.home-container  h2{
+.content-container  h2{
   margin: 24px 0 24px 0;
 }
 
-.home-container p {
+.content-container p {
   margin: 24px 0 24px 0;
   color: black;
 }
