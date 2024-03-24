@@ -11,9 +11,11 @@
 }
 
 .dashboard-container .header-container h1 {
-  font-family: 'poppins-bold';
-  font-size: 70px;
-  margin:0px;
+  color: white;
+  margin-left: 20px;
+  font-family: 'poppins-light';
+  font-size: 50px;
+  margin:auto 0;
 }
 
 .dashboard-container .header-container button {
@@ -21,17 +23,17 @@
   margin: 1rem;
 }
 
-.dashboard-container .header-container h1 {
-  font-family: 'poppins-bold';
-  font-size: 70px;
-  margin:0px;
-}
-
 .title-container h2 {
-    color: green;
-    font-size: 70px; 
+    color: #008000;
+    font-size: 100px; 
     font-family: 'poppins-bold';
-
+    line-height: 30px;
+    margin-bottom: 50px;
+}
+.title-container .color-brown {
+    color: #008000;
+    font-size: 120px; 
+    font-family: 'poppins-bold';
 }
 h2 {
     color: green; 
@@ -42,18 +44,20 @@ h2 {
 .dash-container {
   display: flex;
   flex-direction: row;
+  height: 100vh;
 }
 
 .title-container {
 margin-top: 10%;
-line-height: 20px;
+width: 40%;
   
 }
 
 .package-container{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
 }
 
 .title-container .color-brown {
@@ -66,6 +70,7 @@ line-height: 20px;
 }
 
 .header-container{
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border-bottom: #9e9a41 solid 2px;
@@ -74,7 +79,7 @@ line-height: 20px;
 .product-list {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: center;
   gap: 20px;
 }
@@ -82,14 +87,14 @@ line-height: 20px;
 .product-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   background-color: white; 
   border-radius: 15px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-  width: 300px; 
-  overflow: hidden;
+  width: 250px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  height: 450px;
 }
 
 .product-card.hover {
@@ -100,15 +105,15 @@ line-height: 20px;
 .product-name {
   background-color: white; 
   color: green; 
-  font-size: 25px; 
+  font-size: 20px; 
   padding: 20px; 
   margin: 0; 
   text-align: center; 
 }
 
 .product-image {
-  width: 90%;
-  height: 250px; 
+  width: 80%;
+  height: 200px; 
   object-fit: cover; 
   background-color: white; 
   border-radius: 20px;
@@ -134,10 +139,14 @@ line-height: 20px;
   display: block; 
   width: 100%; 
   padding: 15px; 
-  background-color: #4CAF50; 
+  background-color: green; 
   color: white; 
   font-size: 18px; 
   border: none; 
   cursor: pointer; 
+}
+
+.product-card button:hover {
+  background-color: rgb(5, 65, 5); 
 }
 

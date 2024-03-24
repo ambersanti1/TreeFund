@@ -10,7 +10,7 @@ import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
   return (
-    <div className="home-container">
+    <>
 
       <div className="header-container">
         <h1>TreeFund</h1>
@@ -37,7 +37,7 @@ function Home() {
           </button>
         </div>
       </div>
-
+    <div className="content-container">
       <h2>Planting Today, for a Greener Tomorrow</h2>
       <p>
         With your donation today, we'll make sure biodiversity in Mexico keeps
@@ -78,6 +78,7 @@ function Home() {
 
       <Accordion />
     </div>
+    </>
   );
 }
 
