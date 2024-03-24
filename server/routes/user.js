@@ -35,7 +35,7 @@ router.post("/login", async (req, res) => {
   }
 
   const token = jwt.sign({username: user.username}, process.env.JWT_SECRET_KEY, {expiresIn: '1h'})
-  res.cookie('token', token, {httpOnly: true, maxAge: 360000})
+  res.cookie('token', token, {httpOnly: true, maxAge: 360000, secure: true})
   return res.json({status: true, message: 'Login succesfully'})
 });
 
@@ -65,7 +65,7 @@ router.post("/forgot-password", async (req, res) => {
       from: "carolinasandoval879@gmail.com",
       to: email,
       subject: "Reset password",
-      text: `http://localhost:3000/resetPassword/${encodedToken}`,
+      text: `https://treefund-b757cb53a6e1.herokuapp.com/resetPassword/${encodedToken}`,
     };
 
     transporter.sendMail(mailOptions, function (error, info) {
