@@ -9,9 +9,13 @@ const cookieParser = require("cookie-parser");
 const path = require("path");
 const app = express();
 
-
 app.use(express.json());
-app.use(cors());
+
+const corsOptions = {
+  origin: "https://treefund-b757cb53a6e1.herokuapp.com",
+  credentials: true,
+};
+app.use(cors(corsOptions));
 app.use(express.static(path.join(__dirname + "/public")));
 app.use(cookieParser());
 app.use("/auth", userRouter);
@@ -32,5 +36,5 @@ app.listen(port, () => {
   console.log(`Server running on port: ${port}`);
 });
 
-    // origin: ["http://localhost:3000"],
-    // credentials: true,
+// origin: ["http://localhost:3000"],
+// credentials: true,
