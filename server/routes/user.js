@@ -44,7 +44,6 @@ router.post("/login", async (req, res) => {
     res.cookie("token", token, {
       httpOnly: true,
       maxAge: 360000,
-      secure: true,
     });
     return res.json({ status: true, message: "Login succesfully" });
   } catch (error) {
