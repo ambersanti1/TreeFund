@@ -88,7 +88,7 @@ function Dashboard() {
         </div>
 
         <div className="package-container">
-          <div class="choose">
+          <div className="choose">
             <h2>Choose your package</h2>
           </div>
           <ul className="product-list">
