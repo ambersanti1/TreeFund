@@ -1,10 +1,10 @@
 const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
-const jwt = require('jsonwebtoken')
+const jwt = require("jsonwebtoken");
 const { User } = require("../models/User");
-require('dotenv').config()
-const nodemailer = require('nodemailer')
+require("dotenv").config();
+const nodemailer = require("nodemailer");
 
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
@@ -25,18 +25,32 @@ router.post("/signup", async (req, res) => {
 
 router.post("/login", async (req, res) => {
   const { email, password } = req.body;
-  const user = await User.findOne({ email });
-  if (!user) {
-    return res.json({ message: "User is not registered" });
-  }
-  const validPassword = await bcrypt.compare(password, user.password)
-  if(!validPassword) {
-    return res.json({message: "Password is incorrect"})
-  }
+  try {
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.json({ message: "User is not registered" });
+    }
+    const validPassword = await bcrypt.compare(password, user.password);
+    if (!validPassword) {
+      return res.json({ message: "Password is incorrect" });
+    }
 
-  const token = jwt.sign({username: user.username}, process.env.JWT_SECRET_KEY, {expiresIn: '1h'})
-  res.cookie('token', token, {httpOnly: true, maxAge: 360000, secure: true})
-  return res.json({status: true, message: 'Login succesfully'})
+    const token = jwt.sign(
+      { username: user.username },
+      process.env.JWT_SECRET_KEY,
+      { expiresIn: "1h" }
+    );
+    console.log("Generated Token:", token);
+    res.cookie("token", token, {
+      httpOnly: true,
+      maxAge: 360000,
+      secure: true,
+    });
+    return res.json({ status: true, message: "Login succesfully" });
+  } catch (error) {
+    console.error("Error:", error); // Add this line
+    return res.json({ message: "Internal server error" });
+  }
 });
 
 router.post("/forgot-password", async (req, res) => {
