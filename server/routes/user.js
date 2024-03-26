@@ -53,6 +53,7 @@ router.post("/login", async (req, res) => {
     req.session.token = token;
 
     // res.cookie("token", token, {
+    //   sameSite: "none",
     //   httpOnly: true,
     //   maxAge: 360000,
     //   secure: true,
