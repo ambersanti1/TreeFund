@@ -14,7 +14,6 @@ router.use(
     cookie: {
       secure: true, // Ensure this is true if your site is served over HTTPS
       maxAge: 3600000, // Session duration in milliseconds
-      domain: ".herokuapp.com", // Set the Heroku domain
       sameSite: "none", // Ensure this is set to 'none' for cross-site requests
       httpOnly: true,
     },
