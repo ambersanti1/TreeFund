@@ -11,11 +11,9 @@ import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 function Home() {
   return (
     <>
-
       <div className="header-container">
         <h1>TreeFund</h1>
-
-        <div>
+        <div className = "header-btns">
           <button>
             <Link to="/login"> Log in </Link>
             <FontAwesomeIcon
@@ -38,7 +36,7 @@ function Home() {
         </div>
       </div>
     <div className="content-container">
-      <h2>Planting Today, for a Greener Tomorrow</h2>
+      <h2>Planting today for a greener tomorrow</h2>
       <p>
         With your donation today, we'll make sure biodiversity in Mexico keeps
         on thriving!

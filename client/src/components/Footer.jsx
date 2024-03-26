@@ -8,7 +8,7 @@ export const Footer = () => {
         <h1>TreeFund</h1>
       </div>
 
-      <div>
+      <div className= "footer-visit">
         <h3>Visit</h3>
         <p>IOS Office, No. 345</p>
         <p>Paseo Andares, #456</p>
@@ -16,7 +16,7 @@ export const Footer = () => {
         <p>Mexico</p>
       </div>
 
-      <div>
+      <div className="footer-follow">
         <h3>Follow</h3>
         <p>TreeFundX</p>
         <p>TreeFundFB</p>

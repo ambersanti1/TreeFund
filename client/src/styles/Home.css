@@ -10,16 +10,26 @@
   color: white;
   padding-left: 20px;
   font-family: 'poppins-light';
-  font-size: 50px;
+  font-size: 30px;
   margin:auto 0;
 }
 .header-container button {
   width: 6rem;
-  margin: 1rem;
+  margin: 5px;
 }
 
 .header-container a {
   text-decoration: none;
+  font-size: 15px;
+}
+.content-container h2 {
+  color: green;
+  font-size: 25px;
+}
+.content-container p {
+  color: green;
+  font-size: 18px;
+  margin: 10px;
 }
 .content-container a {
   text-decoration: none;
@@ -27,7 +37,14 @@
 .content-container .donate h2{
   color: white;
   text-decoration: none;
+  margin: 10px;
 }
+
+.content-container .donate p{
+  color: white;
+  margin: 10px;
+}
+
 .join-donate-container {
   display: flex;
   flex-direction: row;
@@ -36,17 +53,13 @@
 
 .donate {
   background-color: green;
-  padding-left: 20px;
+  color: white;
+  padding: 15px;
   border-radius: 5px;
   cursor:pointer;
+  margin: 1rem 0 0 1rem;
 }
 
-
-.content-container .donate p{
-  color: white;
-  font-size: 20px;
-  margin: 10px;
-}
 
 .container-text {
   display: flex;
@@ -61,4 +74,54 @@
 .content-container p {
   margin: 24px 0 24px 0;
   color: black;
+}
+
+@media(max-width: 700px){
+  .header-btns {
+    display: flex;
+    flex-direction: row;
+  }
+  .header-container button
+  .header-container h1 {
+  color: white;
+  padding-left: 20px;
+  font-family: 'poppins-light';
+  font-size: 20px;
+  margin:auto 0;
+}
+.header-container button {
+  width: 5.5rem;
+  margin: 10px;
+  font-size: 10px;
+}
+
+.header-container a {
+  text-decoration: none;
+  font-size: 10px;
+}
+  .content-container h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .content-container p {
+    font-size: 15px;
+    margin: 5px;
+    text-align: center;
+  }
+  .donate {
+    padding: 5px;
+    width: 200px;
+  }
+}
+
+@media(max-width: 1000px){
+  .join-donate-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .donate {
+    margin: 1rem 0 0 0;
+  }
 }

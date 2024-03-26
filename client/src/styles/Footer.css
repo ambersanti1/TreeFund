@@ -8,13 +8,14 @@
 }
 .footer-container h1{
   color: white;
+  font-size: 30px;
 }
 .footer-container h3{
-  font-size: small;
+  font-size: 15px;
   color: white;
 }
 .footer-container p{
-  font-size: x-small;
+  font-size: 15px;
   color: white;
 }
 
@@ -22,4 +23,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media(max-width: 700px ){
+  .footer-container,
+  .footer-container h3,
+  .footer-container p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .footer-container .footer-visit {
+    margin-bottom: 20px;
+  }
 }
