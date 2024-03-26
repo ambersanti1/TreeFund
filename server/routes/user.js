@@ -6,7 +6,6 @@ const { User } = require("../models/User");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const session = require('express-session')
-
 router.use(
   session({
     secret: process.env.SESSION_SECRET,
@@ -17,6 +16,7 @@ router.use(
       maxAge: 3600000, // Session duration in milliseconds
       domain: ".herokuapp.com", // Set the Heroku domain
       sameSite: "none", // Ensure this is set to 'none' for cross-site requests
+      httpOnly: true,
     },
   })
 );
@@ -65,6 +65,7 @@ router.post("/login", async (req, res) => {
     //   maxAge: 360000,
     //   secure: true,
     // });
+    res.setHeader("Authorization", `${token}`);
     return res.json({ status: true, message: "Login succesfully" });
   } catch (error) {
     console.error("Error:", error); // Add this line
