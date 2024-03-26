@@ -23,17 +23,19 @@ function Dashboard() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get("http://localhost:5000/auth/verify").then((res) => {
-      if (res.data.status) {
-      } else {
-        navigate("/login");
-      }
-      console.log(res);
-    });
+    axios
+      .get("https://treefund-b757cb53a6e1.herokuapp.com/auth/verify")
+      .then((res) => {
+        if (res.data.status) {
+        } else {
+          navigate("/login");
+        }
+        console.log(res);
+      });
   }, [navigate]);
   const handleLogout = () => {
     axios
-      .get("http://localhost:5000/auth/logout")
+      .get("https://treefund-b757cb53a6e1.herokuapp.com/auth/logout")
       .then((res) => {
         if (res.data.status) {
           toast.info("You've logged out", {
@@ -54,7 +56,7 @@ function Dashboard() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:5000/products")
+    fetch("https://treefund-b757cb53a6e1.herokuapp.com/products")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));

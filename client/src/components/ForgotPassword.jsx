@@ -13,9 +13,12 @@ const ForgotPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/auth/forgot-password", {
-        email,
-      })
+      .post(
+        "https://treefund-b757cb53a6e1.herokuapp.com/auth/forgot-password",
+        {
+          email,
+        }
+      )
       .then((response) => {
         if (response.data.status) {
           alert("Check your email for reset password link");

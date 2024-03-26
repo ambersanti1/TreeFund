@@ -4,9 +4,12 @@ import React from "react";
 const Checkout = ({ cartItems }) => {
   const handleCheckout = () => {
     axios
-      .post("http://localhost:5000/api/stripe/create-checkout-session", {
-        cartItems,
-      })
+      .post(
+        "https://treefund-b757cb53a6e1.herokuapp.com/api/stripe/create-checkout-session",
+        {
+          cartItems,
+        }
+      )
       .then((res) => {
         if (res.data.url) {
           window.location.href = res.data.url;
