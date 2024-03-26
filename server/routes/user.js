@@ -53,6 +53,7 @@ router.post("/login", async (req, res) => {
     // req.session.token = token;
 
     res.cookie("token", token, {
+      domain: ".herokuapp.com",
       sameSite: "none",
       httpOnly: true,
       maxAge: 360000,
