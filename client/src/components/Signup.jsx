@@ -16,7 +16,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/auth/signup", {
+      .post("https://treefund-b757cb53a6e1.herokuapp.com/auth/signup", {
         username,
         email,
         password,
@@ -45,7 +45,6 @@ const Signup = () => {
       })
       .catch((err) => {
         console.log(err);
-
       });
   };
 
