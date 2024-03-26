@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "../styles/dashboard.css";
-import "../styles/Header.css";
 
 import TreeHugerImage from "../Images/TreeHugerImage.webp";
 import NatureSaviorImage from "../Images/NatureSaviorImage.webp";
@@ -31,7 +30,7 @@ function Dashboard() {
       }
       console.log(res);
     });
-  }, []);
+  }, [navigate]);
   const handleLogout = () => {
     axios
       .get("http://localhost:5000/auth/logout")
@@ -67,7 +66,7 @@ function Dashboard() {
         <h1>TreeFund</h1>
         <div>
           <button className="logout" onClick={handleLogout}>
-            <a>Log out </a>
+            <a href>Log out </a>
             <FontAwesomeIcon
               icon={faLeaf}
               style={{
@@ -89,7 +88,7 @@ function Dashboard() {
         </div>
 
         <div className="package-container">
-          <div className="choose">
+          <div class="choose">
             <h2>Choose your package</h2>
           </div>
           <ul className="product-list">
