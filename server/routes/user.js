@@ -5,6 +5,15 @@ const jwt = require("jsonwebtoken");
 const { User } = require("../models/User");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
+const session = require('express-session')
+
+router.use(
+  session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
@@ -41,11 +50,13 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1h" }
     );
     console.log("Generated Token:", token);
-    res.cookie("token", token, {
-      domain: ".herokuapp.com"
-      httpOnly: true,
-      maxAge: 360000,
-    });
+    req.session.token = token;
+
+    // res.cookie("token", token, {
+    //   httpOnly: true,
+    //   maxAge: 360000,
+    //   secure: true,
+    // });
     return res.json({ status: true, message: "Login succesfully" });
   } catch (error) {
     console.error("Error:", error); // Add this line
@@ -111,7 +122,7 @@ router.post("/reset-password/:token", async (req, res) => {
 
 const verifyUser = async (req, res, next) => {
   try {
-    const token = req.cookies.token;
+    const token = req.session.token;
     if (!token) {
       return res.json({ status: false, message: "No token" });
       console.log("Denied");
@@ -134,3 +145,10 @@ router.get("/logout", (req, res) => {
 });
 
 module.exports = router;
+
+    // res.cookie("token", token, {
+    //   domain: "https://treefund-b757cb53a6e1.herokuapp.com",
+    //   httpOnly: true,
+    //   maxAge: 360000,
+    //   secure: true,
+    // });

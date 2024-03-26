@@ -10,11 +10,10 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  // axios.defaults.withCredentials = true;
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/auth/login", {
+      .post("https://treefund-b757cb53a6e1.herokuapp.com/auth/login", {
         email,
         password,
       })
