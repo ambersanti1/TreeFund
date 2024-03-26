@@ -1,0 +1,25 @@
+.header-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: #9e9a41 solid 2px;
+  background-color: green;
+  height: auto;
+}
+
+.header-container h1 {
+  color: white;
+  padding-left: 20px;
+  font-family: 'poppins-light';
+  font-size: 30px;
+  margin:auto 0;
+}
+.header-container button {
+  width: 6rem;
+  margin: 10px;
+}
+
+.header-container a {
+  text-decoration: none;
+  font-size: 15px;
+}

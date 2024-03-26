@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "../styles/Dashboard.css";
+import "../styles/Header.css"
 
 import TreeHugerImage from "../Images/TreeHugerImage.webp";
 import NatureSaviorImage from "../Images/NatureSaviorImage.webp";

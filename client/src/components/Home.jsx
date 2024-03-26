@@ -5,6 +5,7 @@ import Accordion from "./Accordion";
 import "../styles/Accordion.css";
 import Hero from "./Hero";
 import "../styles/Home.css";
+import "../styles/Header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 

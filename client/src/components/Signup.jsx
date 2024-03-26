@@ -3,6 +3,8 @@ import "../styles/Signup.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
@@ -48,47 +50,63 @@ const Signup = () => {
   };
 
   return (
-    <div className="sign-up-container">
-      <form className="sign-up-form" onSubmit={handleSubmit}>
-        <h2>Sign Up</h2>
-        <label htmlFor="username">Username:</label>
-        <input
-          required
-          type="text"
-          placeholder="Username"
-          onChange={(e) => setUsername(e.target.value)}
-        />
-
-        <label htmlFor="email">Email:</label>
-        <input
-          required
-          type="email"
-          autoComplete="off"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <label htmlFor="password">Password:</label>
-        <input
-          required
-          type="password"
-          placeholder="****"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button type="submit">Sign Up</button>
-
-        <div className="dont">
-          <p> Already have an account? </p>
+    <>
+      <div className="header-container">
+        <h1>TreeFund</h1>
+        <div className="header-btns">
+          <button>
+            <Link to="/"> Home </Link>
+            <FontAwesomeIcon
+              icon={faLeaf}
+              style={{
+                color: "#25511f",
+              }}
+            />
+          </button>
         </div>
+      </div>
+      <div className="sign-up-container">
+        <form className="sign-up-form" onSubmit={handleSubmit}>
+          <h2>Sign Up</h2>
+          <label htmlFor="username">Username:</label>
+          <input
+            required
+            type="text"
+            placeholder="Username"
+            onChange={(e) => setUsername(e.target.value)}
+          />
 
-        <div className="user">
-          <Link to="/login">Log in</Link>
-        </div>
+          <label htmlFor="email">Email:</label>
+          <input
+            required
+            type="email"
+            autoComplete="off"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
 
-        <ToastContainer />
-      </form>
-    </div>
+          <label htmlFor="password">Password:</label>
+          <input
+            required
+            type="password"
+            placeholder="****"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button type="submit">Sign Up</button>
+
+          <div className="dont">
+            <p> Already have an account? </p>
+          </div>
+
+          <div className="user">
+            <Link to="/login">Log in</Link>
+          </div>
+
+          <ToastContainer />
+        </form>
+      </div>
+    </>
   );
 };
 

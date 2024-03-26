@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "../styles/Signup.css";
+import "../styles/Header.css"
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -44,46 +47,59 @@ const Login = () => {
       });
   };
   return (
-    <div className="sign-up-container">
-      <form className="sign-up-form" onSubmit={handleSubmit}>
-        <h2>Log in</h2>
-
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          autoComplete="off"
-          placeholder="Email"
-          onChange={(e) => setEmail(e.target.value)}
-        />
-
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          placeholder="****"
-          onChange={(e) => setPassword(e.target.value)}
-        />
-
-        <button type="submit">Log in</button>
-
-        <div className="after-button">
-
-          <div className="forgot">
-            <Link to="/forgotPassword">Forgot Password?</Link>
-          </div>
-
-          <div className="dont">
-            <p> Don't have an account? </p>
-          </div>
-
-          <div className="user">
-            <Link to="/signup"> Sign up </Link>
-          </div>
-
+    <>
+      <div className="header-container">
+        <h1>TreeFund</h1>
+        <div className="header-btns">
+          <button>
+            <Link to="/"> Home </Link>
+            <FontAwesomeIcon
+              icon={faLeaf}
+              style={{
+                color: "#25511f",
+              }}
+            />
+          </button>
         </div>
+      </div>
+      <div className="sign-up-container">
+        <form className="sign-up-form" onSubmit={handleSubmit}>
+          <h2>Log in</h2>
 
-      </form>
-      <ToastContainer />
-    </div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            autoComplete="off"
+            placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+
+          <label htmlFor="password">Password:</label>
+          <input
+            type="password"
+            placeholder="****"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+
+          <button type="submit">Log in</button>
+
+          <div className="after-button">
+            <div className="forgot">
+              <Link to="/forgotPassword">Forgot Password?</Link>
+            </div>
+
+            <div className="dont">
+              <p> Don't have an account? </p>
+            </div>
+
+            <div className="user">
+              <Link to="/signup"> Sign up </Link>
+            </div>
+          </div>
+        </form>
+        <ToastContainer />
+      </div>
+    </>
   );
 };
 
