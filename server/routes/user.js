@@ -6,19 +6,19 @@ const { User } = require("../models/User");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const session = require('express-session')
-router.use(
-  session({
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-    cookie: {
-      secure: true, // Ensure this is true if your site is served over HTTPS
-      maxAge: 3600000, // Session duration in milliseconds
-      sameSite: "none", // Ensure this is set to 'none' for cross-site requests
-      httpOnly: true,
-    },
-  })
-);
+// router.use(
+//   session({
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {
+//       secure: true, // Ensure this is true if your site is served over HTTPS
+//       maxAge: 3600000, // Session duration in milliseconds
+//       sameSite: "none", // Ensure this is set to 'none' for cross-site requests
+//       httpOnly: true,
+//     },
+//   })
+// );
 
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
@@ -55,15 +55,13 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1h" }
     );
     console.log("Generated Token:", token);
-    req.session.token = token;
+    // req.session.token = token;
 
-    // res.cookie("token", token, {
-    //   domain: ".herokuapp.com",
-    //   sameSite: "none",
-    //   httpOnly: true,
-    //   maxAge: 360000,
-    //   secure: true,
-    // });
+    res.cookie("token", token, {
+      httpOnly: true,
+      maxAge: 360000,
+      secure: true,
+    });
     res.setHeader("Authorization", `${token}`);
     return res.json({ status: true, message: "Login succesfully" });
   } catch (error) {
@@ -130,7 +128,7 @@ router.post("/reset-password/:token", async (req, res) => {
 
 const verifyUser = async (req, res, next) => {
   try {
-    const token = req.session.token;
+    const token = req.cookies.token;
     if (!token) {
       return res.json({ status: false, message: "No token" });
       console.log("Denied");
