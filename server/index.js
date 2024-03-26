@@ -15,6 +15,7 @@ const corsOptions = {
   origin: [
     "http://localhost:3000",
     "https://treefund-b757cb53a6e1.herokuapp.com",
+    "https://treefundcrowdfunding.netlify.app/",
   ],
   credentials: true,
   allowedHeaders: [

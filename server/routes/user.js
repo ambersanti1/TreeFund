@@ -50,14 +50,14 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1h" }
     );
     console.log("Generated Token:", token);
-    req.session.token = token;
+    // req.session.token = token;
 
-    // res.cookie("token", token, {
-    //   sameSite: "none",
-    //   httpOnly: true,
-    //   maxAge: 360000,
-    //   secure: true,
-    // });
+    res.cookie("token", token, {
+      sameSite: "none",
+      httpOnly: true,
+      maxAge: 360000,
+      secure: true,
+    });
     return res.json({ status: true, message: "Login succesfully" });
   } catch (error) {
     console.error("Error:", error); // Add this line
@@ -123,7 +123,7 @@ router.post("/reset-password/:token", async (req, res) => {
 
 const verifyUser = async (req, res, next) => {
   try {
-    const token = req.session.token;
+    const token = req.cookie.token;
     if (!token) {
       return res.json({ status: false, message: "No token" });
       console.log("Denied");
