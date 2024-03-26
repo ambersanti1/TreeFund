@@ -26,7 +26,7 @@ const corsOptions = {
   ],
 };
 app.use(cors(corsOptions));
-app.use(express.static(path.join(__dirname + "/public")));
+app.use(express.static(path.join(__dirname, "client", "build")));
 app.use(cookieParser());
 app.use("/auth", userRouter);
 
