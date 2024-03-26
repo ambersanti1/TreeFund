@@ -63,7 +63,6 @@ router.post("/login", async (req, res) => {
       maxAge: 360000,
       secure: true,
     });
-    res.setHeader("Authorization", `${token}`);
     return res.json({ status: true, message: "Login succesfully" });
   } catch (error) {
     console.error("Error:", error); // Add this line
