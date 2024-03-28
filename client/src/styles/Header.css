@@ -20,6 +20,7 @@
 
 .header-container a {
   text-decoration: none;
+  width: 130px;
   font-size: 15px;
 }
 

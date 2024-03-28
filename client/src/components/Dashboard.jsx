@@ -67,7 +67,7 @@ function Dashboard() {
       <div className="header-container">
         <h1>TreeFund</h1>
         <div className="header-btns">
-          <button className="logout" onClick={handleLogout}>
+          <button onClick={handleLogout}>
             <a>Log out </a>
             <FontAwesomeIcon
               icon={faLeaf}
