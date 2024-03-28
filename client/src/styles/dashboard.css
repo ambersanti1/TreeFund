@@ -8,7 +8,6 @@
     font-size: 80px; 
     font-family: 'poppins-bold';
     line-height: 20px;
-    margin: 0 0 50px 50px;
 }
 .title-container .color-brown {
     color: #008000;
@@ -139,7 +138,7 @@
     align-items: center;
   }
   .title-container h2 {
-    font-size: 40px; 
+    font-size: 50px; 
   }
   .title-container .color-brown {
       font-size: 60px; 
@@ -152,7 +151,7 @@
   }
   .package-container h2 {
       color: green; 
-      font-size: 20px; 
+      font-size: 30px; 
       margin: 0 0 1rem 0;
       text-align: center;
   }
