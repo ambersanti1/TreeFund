@@ -2,9 +2,8 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  border-bottom: #9e9a41 solid 2px;
   background-color: green;
-  height: auto;
+  height: 80px;
 }
 
 .header-container h1 {
@@ -24,7 +23,7 @@
   font-size: 15px;
 }
 
-@media (max-width: 700px){
+@media (max-width: 770px){
   .header-container {
     width: 100%;
 
@@ -36,13 +35,7 @@
   color: white;
   padding-left: 20px;
   font-family: 'poppins-light';
-  font-size: 20px;
+  font-size: 25px;
   margin:auto 0;
 }
-.header-container a {
-  text-decoration: none;
-  font-size: 12px;
-}
-
-
 }

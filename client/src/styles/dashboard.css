@@ -138,11 +138,11 @@
     align-items: center;
   }
   .title-container h2 {
-    font-size: 60px; 
+    font-size: 30px; 
     margin:0.5rem 0 0.5rem 0;
   }
   .title-container .color-brown {
-      font-size: 80px; 
+      font-size: 60px; 
   }
   .package-container {
     width: auto;
@@ -159,6 +159,15 @@
 }
 @media(max-width: 900px){
   .product-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+  }
+}
+
+@media(max-width: 770px) {
+    .product-list{
     display: flex;
     flex-direction: column;
     justify-content: center;
