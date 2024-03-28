@@ -66,9 +66,9 @@ function Dashboard() {
     <div className="dashboard-container">
       <div className="header-container">
         <h1>TreeFund</h1>
-        <div className="header-btns">
-          <button onClick={handleLogout}>
-            <a>Log out </a>
+        <div>
+          <button className="logout" onClick={handleLogout}>
+            <a href>Log out </a>
             <FontAwesomeIcon
               icon={faLeaf}
               style={{
@@ -77,6 +77,7 @@ function Dashboard() {
               }}
             />
           </button>
+        </div>
       </div>
 
       <div className="dash-container">
@@ -110,7 +111,6 @@ function Dashboard() {
           </ul>
         </div>
         <ToastContainer />
-      </div>
       </div>
     </div>
   );
