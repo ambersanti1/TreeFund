@@ -73,6 +73,7 @@ function Dashboard() {
               icon={faLeaf}
               style={{
                 color: "#25511f",
+                fontSize: "15px",
               }}
             />
           </button>

@@ -4,7 +4,6 @@
   justify-content: space-around;
   background-color: green;
   width: 100%;
-  padding: 20px;
 }
 .footer-container h1{
   color: white;
@@ -26,6 +25,14 @@
 }
 
 @media(max-width: 700px ){
+
+  .footer-container h1 {
+    font-size: 20px;
+    margin: 0.5rem;
+  }
+  .footer-container p {
+    font-size: 10px;
+  }
   .footer-container,
   .footer-container h3,
   .footer-container p {
@@ -36,6 +43,9 @@
     height: auto;
   }
   .footer-container .footer-visit {
-    margin-bottom: 20px;
+    margin: 0.5rem;
+  }
+  .footer-follow {
+    margin-bottom: 0.5rem;
   }
 }
