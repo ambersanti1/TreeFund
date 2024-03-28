@@ -8,6 +8,7 @@
     font-size: 80px; 
     font-family: 'poppins-bold';
     line-height: 20px;
+    margin: 0 0 50px 50px;
 }
 .title-container .color-brown {
     color: #008000;
@@ -131,17 +132,17 @@
   }
   .title-container {
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
   .title-container h2 {
-    font-size: 40px; 
+    font-size: 60px; 
+    margin:0.5rem 0 0.5rem 0;
   }
   .title-container .color-brown {
-      font-size: 60px; 
+      font-size: 80px; 
   }
   .package-container {
     width: auto;
@@ -158,15 +159,6 @@
 }
 @media(max-width: 900px){
   .product-list{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: auto;
-  }
-}
-
-@media(max-width: 770px) {
-    .product-list{
     display: flex;
     flex-direction: column;
     justify-content: center;

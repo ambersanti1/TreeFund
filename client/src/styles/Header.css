@@ -2,6 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
+  border-bottom: #9e9a41 solid 2px;
   background-color: green;
   height: 80px;
 }
@@ -20,7 +21,6 @@
 
 .header-container a {
   text-decoration: none;
-  width: 130px;
   font-size: 15px;
 }
 
@@ -36,7 +36,13 @@
   color: white;
   padding-left: 20px;
   font-family: 'poppins-light';
-  font-size: 25px;
+  font-size: 20px;
   margin:auto 0;
 }
+.header-container a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+
 }
