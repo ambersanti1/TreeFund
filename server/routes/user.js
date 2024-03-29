@@ -6,19 +6,6 @@ const { User } = require("../models/User");
 require("dotenv").config();
 const nodemailer = require("nodemailer");
 const session = require('express-session')
-// router.use(
-//   session({
-//     secret: process.env.SESSION_SECRET,
-//     resave: false,
-//     saveUninitialized: true,
-//     cookie: {
-//       secure: true, // Ensure this is true if your site is served over HTTPS
-//       maxAge: 3600000, // Session duration in milliseconds
-//       sameSite: "none", // Ensure this is set to 'none' for cross-site requests
-//       httpOnly: true,
-//     },
-//   })
-// );
 
 router.post("/signup", async (req, res) => {
   const { username, email, password } = req.body;
@@ -151,10 +138,3 @@ router.get("/logout", (req, res) => {
 });
 
 module.exports = router;
-
-    // res.cookie("token", token, {
-    //   domain: "https://treefund-b757cb53a6e1.herokuapp.com",
-    //   httpOnly: true,
-    //   maxAge: 360000,
-    //   secure: true,
-    // });
