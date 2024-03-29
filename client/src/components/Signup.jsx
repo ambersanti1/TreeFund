@@ -53,16 +53,19 @@ const Signup = () => {
       <div className="header-container">
         <h1>TreeFund</h1>
         <div className="header-btns">
-          <button>
-            <Link to="/"> Home </Link>
-            <FontAwesomeIcon
-              icon={faLeaf}
-              style={{
-                color: "#25511f",
-                fontSize: "15px",
-              }}
-            />
-          </button>
+          <Link to="/">
+            <button>
+              {" "}
+              Home{" "}
+              <FontAwesomeIcon
+                icon={faLeaf}
+                style={{
+                  color: "#25511f",
+                  fontSize: "15px",
+                }}
+              />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="sign-up-container">

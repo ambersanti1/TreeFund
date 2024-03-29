@@ -23,13 +23,15 @@ function Dashboard() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios.get("https://treefund-b757cb53a6e1.herokuapp.com/auth/verify").then((res) => {
-      if (res.data.status) {
-      } else {
-        navigate("/login");
-      }
-      console.log(res);
-    });
+    axios
+      .get("https://treefund-b757cb53a6e1.herokuapp.com/auth/verify")
+      .then((res) => {
+        if (res.data.status) {
+        } else {
+          navigate("/login");
+        }
+        console.log(res);
+      });
   }, [navigate]);
   const handleLogout = () => {
     axios
