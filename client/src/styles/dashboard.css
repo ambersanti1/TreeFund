@@ -5,13 +5,14 @@
 
 .title-container h2 {
     color: #008000;
-    font-size: 70px; 
+    font-size: 80px; 
     font-family: 'poppins-bold';
     line-height: 20px;
+    margin: 0 0 50px 50px;
 }
 .title-container .color-brown {
     color: #008000;
-    font-size: 90px; 
+    font-size: 100px; 
     font-family: 'poppins-bold';
 }
 
@@ -65,7 +66,7 @@
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); 
   width: 200px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
-  height: 350px;
+  height: 400px;
 }
 
 .product-card.hover {
@@ -137,11 +138,11 @@
     align-items: center;
   }
   .title-container h2 {
-    font-size: 60px; 
-    margin:0.5rem 0 0.5rem 0;
+    font-size: 40px; 
+    margin: 0;
   }
   .title-container .color-brown {
-      font-size: 80px; 
+      font-size: 60px; 
   }
   .package-container {
     width: auto;
