@@ -42,7 +42,7 @@ function Home() {
         <h2>Planting today for a greener tomorrow</h2>
         <p>
           With your donation today, we'll make sure biodiversity in Mexico keeps
-          on thriving!
+          on thriving! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum odit debitis libero et natus quae consequatur harum, consequuntur itaque ipsam magni consectetur reiciendis, explicabo hic aspernatur enim vero quia porro!
         </p>
 
         <Hero />

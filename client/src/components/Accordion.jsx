@@ -2,13 +2,11 @@ import '../styles/Accordion.css';
 import manPlant from '../Images/Man_plant.webp';
 import mexicanForest from '../Images/Mexican_Trees.webp'
 import havingFun from '../Images/Having_fun.webp'
-import campingFamily from '../Images/Camping_family.webp'
 import plantingtrees from '../Images/Planting_trees.webp'
 import dronePlant from '../Images/Drone_Plant.webp'
 import irrigationTrees from '../Images/Irrigation_trees.webp'
 import reforestTrees from '../Images/Reforest_trees.webp'
 import plantationTrees from '../Images/Plantation_trees.webp'
-import farTrees from '../Images/Far_trees.webp'
 
 import React, { useState, useEffect } from 'react';
 
@@ -32,7 +30,6 @@ const Accordion = () => {
     { src: manPlant, alt: "Man planting a tree", content: "Help plant trees!" },
     { src: mexicanForest, alt: "A reforested mexican forest", content: "Be the future!" },
     { src: havingFun, alt: "People Having Fun", content: "Secure the future!" },
-    { src: campingFamily, alt: "Preserve the Woods", content: "Enjoy Nature!" },
     { src: plantingtrees, alt: "People Planting Trees", content: "Support the cause!" },
     { src: dronePlant, alt: "Drone Tech", content: "Fund Innovation!" },
     { src: irrigationTrees, alt: "Irrigation Tech", content: "Help grow life!" },

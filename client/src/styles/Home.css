@@ -1,7 +1,8 @@
 
 .content-container h2 {
   color: green;
-  font-size: 25px;
+  font-size: 35px;
+  font-family: 'poppins-bold';
 }
 .content-container p {
   color: green;
@@ -57,12 +58,12 @@
     display: flex;
     flex-direction: row;
   }
-  .header-container button
+  /* .header-container button
   .header-container h1 {
   color: white;
   padding-left: 20px;
   font-family: 'poppins-light';
-  font-size: 20px;
+  font-size: 25px;
   margin:auto 0;
 }
 .header-container button {
@@ -74,9 +75,9 @@
 .header-container a {
   text-decoration: none;
   font-size: 10px;
-}
+} */
   .content-container h2 {
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
   }
   .content-container p {

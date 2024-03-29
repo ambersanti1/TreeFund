@@ -1,8 +1,8 @@
 .header-container {
   width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
-  border-bottom: #9e9a41 solid 2px;
   background-color: green;
   height: auto;
 }
@@ -27,7 +27,7 @@
 @media (max-width: 700px){
   .header-container {
     width: 100%;
-
+    height:80px;
   }
   .header-container button {
   margin: 0;
@@ -41,7 +41,7 @@
 }
 .header-container a {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 15px;
 }
 
 

@@ -85,7 +85,7 @@
 
 /* Smaller Screens and Devices */
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
   .accordion {
     display: none;
   }
