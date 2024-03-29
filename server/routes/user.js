@@ -42,13 +42,10 @@ router.post("/login", async (req, res) => {
       { expiresIn: "1h" }
     );
     console.log("Generated Token:", token);
-    // req.session.token = token;
-
     res.cookie("token", token, {
-      sameSite: "none",
+      // sameSite: "none",
       httpOnly: true,
       maxAge: 360000,
-      secure: true,
     });
     return res.json({ status: true, message: "Login succesfully" });
   } catch (error) {

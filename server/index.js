@@ -16,20 +16,12 @@ const corsOptions = {
     "https://treefund-b757cb53a6e1.herokuapp.com",
   ],
   credentials: true,
-  allowedHeaders: [
-    "Content-Type",
-    "Accept",
-    "Origin",
-    "X-Requested-With",
-    "Authorization",
-    "Set-Cookie",
-  ],
 };
 app.use(cors(corsOptions));
-// app.use(express.static(path.join(__dirname + "/public")));
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "..","client", "build", "index.html")); // relative path
-});
+app.use(express.static(path.join(__dirname + "/public")));
+// app.get("*", (req, res) => {
+//   res.sendFile(path.resolve(__dirname, "..","/client", "/build", "/index.html")); // relative path
+// });
 app.use(cookieParser());
 app.use("/auth", userRouter);
 

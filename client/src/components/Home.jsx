@@ -15,34 +15,42 @@ function Home() {
       <div className="header-container">
         <h1>TreeFund</h1>
         <div className="header-btns">
-          <button>
-            <Link to="/login"> Log in </Link>
-            <FontAwesomeIcon
-              icon={faLeaf}
-              style={{
-                color: "#25511f",
-                fontSize: "15px",
-              }}
-            />
-          </button>
-
-          <button>
-            <Link to="/signup"> Sign up </Link>
-            <FontAwesomeIcon
-              icon={faLeaf}
-              style={{
-                color: "#25511f",
-                fontSize: "15px",
-              }}
-            />
-          </button>
+          <Link to="/login">
+            <button>
+              {" "}
+              Log in{" "}
+              <FontAwesomeIcon
+                icon={faLeaf}
+                style={{
+                  color: "#25511f",
+                  fontSize: "15px",
+                }}
+              />
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button>
+              {" "}
+              Sign up{" "}
+              <FontAwesomeIcon
+                icon={faLeaf}
+                style={{
+                  color: "#25511f",
+                  fontSize: "15px",
+                }}
+              />
+            </button>
+          </Link>
         </div>
       </div>
       <div className="content-container">
         <h2>Planting today for a greener tomorrow</h2>
         <p>
           With your donation today, we'll make sure biodiversity in Mexico keeps
-          on thriving! Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum odit debitis libero et natus quae consequatur harum, consequuntur itaque ipsam magni consectetur reiciendis, explicabo hic aspernatur enim vero quia porro!
+          on thriving! Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Laborum odit debitis libero et natus quae consequatur harum,
+          consequuntur itaque ipsam magni consectetur reiciendis, explicabo hic
+          aspernatur enim vero quia porro!
         </p>
 
         <Hero />

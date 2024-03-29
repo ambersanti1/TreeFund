@@ -23,15 +23,13 @@ function Dashboard() {
   const navigate = useNavigate();
   axios.defaults.withCredentials = true;
   useEffect(() => {
-    axios
-      .get("https://treefund-b757cb53a6e1.herokuapp.com/auth/verify")
-      .then((res) => {
-        if (res.data.status) {
-        } else {
-          navigate("/login");
-        }
-        console.log(res);
-      });
+    axios.get("https://treefund-b757cb53a6e1.herokuapp.com/auth/verify").then((res) => {
+      if (res.data.status) {
+      } else {
+        navigate("/login");
+      }
+      console.log(res);
+    });
   }, [navigate]);
   const handleLogout = () => {
     axios
@@ -91,7 +89,7 @@ function Dashboard() {
         </div>
 
         <div className="package-container">
-          <div class="choose">
+          <div className="choose">
             <h2>Choose your package</h2>
           </div>
           <ul className="product-list">

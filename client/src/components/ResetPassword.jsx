@@ -12,13 +12,9 @@ const ResetPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post(
-        "https://treefund-b757cb53a6e1.herokuapp.com/auth/reset-password/" +
-          token,
-        {
-          password,
-        }
-      )
+      .post("https://treefund-b757cb53a6e1.herokuapp.com/auth/reset-password/" + token, {
+        password,
+      })
       .then((response) => {
         if (response.data.status) {
           navigate("/login");
