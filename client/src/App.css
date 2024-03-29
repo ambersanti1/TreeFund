@@ -18,9 +18,6 @@
   box-sizing: border-box;
 }
 
-body {
-    background-color: rgba(0, 128, 0, 0.358);
-}
 
 .content-container {
   width: 100%; /* Full width of the element */

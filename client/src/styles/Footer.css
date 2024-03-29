@@ -4,7 +4,15 @@
   justify-content: space-around;
   background-color: green;
   width: 100%;
-  margin: 50px;
+}
+
+.footer-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: green;
+  width: 100%;
+  margin: 30px;
 }
 .footer-container h1{
   color: white;
@@ -34,9 +42,9 @@
   .footer-container p {
     font-size: 10px;
   }
-  .footer-container,
-  .footer-container h3,
-  .footer-container p {
+  .footer-cols,
+  .footer-cols h3,
+  .footer-cols p {
     display: flex;
     flex-direction: column;
     justify-content: center;

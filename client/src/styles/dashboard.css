@@ -29,6 +29,7 @@
 .title-container {
   margin-top: 10%;
   width: 40%;
+  background-color: rgba(0, 128, 0, 0.098);
 }
 
 .package-container{
