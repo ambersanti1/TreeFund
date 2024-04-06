@@ -9,6 +9,7 @@ import "../styles/Header.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
+
 function Home() {
   return (
     <>

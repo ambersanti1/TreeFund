@@ -73,6 +73,7 @@ const Signup = () => {
           <h2>Sign Up</h2>
           <label htmlFor="username">Username:</label>
           <input
+            class = "name-signup"
             required
             type="text"
             placeholder="Username"
@@ -81,6 +82,7 @@ const Signup = () => {
 
           <label htmlFor="email">Email:</label>
           <input
+            class = "email-signup"
             required
             type="email"
             autoComplete="off"

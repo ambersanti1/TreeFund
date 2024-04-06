@@ -72,6 +72,7 @@ const Login = () => {
 
           <label htmlFor="email">Email:</label>
           <input
+            class = "email-login"
             type="email"
             autoComplete="off"
             placeholder="Email"
