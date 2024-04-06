@@ -13,11 +13,13 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+const lowercaseEmail = email.toLowerCase();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
       .post("https://treefund-b757cb53a6e1.herokuapp.com/auth/login", {
-        email,
+        email: lowercaseEmail,
         password,
       })
       .then((response) => {
