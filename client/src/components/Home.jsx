@@ -47,9 +47,9 @@ function Home() {
           />
         </h1>
         <div className="header-btns">
-          <a href="#donate">
-            <button> Donate </button>
-          </a>
+          <button>
+            <a href="#donate">Donate</a>
+          </button>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ function Home() {
           </div>
         </div>
 
-        <section id = "donate"className="dash-container">
+        <section id="donate" className="dash-container">
           <div className="title-container">
             <h2 className="color-brown join">JOIN THE</h2>
             <br />

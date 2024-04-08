@@ -16,12 +16,16 @@
   margin:auto 0;
 }
 .header-container button {
-  width: 100px;
+  padding: 10px;
   margin: 50px;
   font-size: 15px;
   cursor:pointer;
-  background-color: green;
+  background-color: rgb(18, 74, 18);
   border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-container .header-btns {
@@ -30,6 +34,7 @@
   align-items: center;
 }
 .header-container a {
+  display: inline-block;
   text-decoration: none;
   font-size: 15px;
 }
