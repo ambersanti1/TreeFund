@@ -102,7 +102,7 @@ function Home() {
                     src={imageMap[product.name] || TreeHugerImage}
                     alt={product.name}
                   />
-                  <p className="product-price">${product.price} USD</p>
+                  <p className="product-price">{product.price} USD</p>
                   <p className="product-description">{product.description}</p>
                   <Checkout cartItems={[product]} />
                 </li>
