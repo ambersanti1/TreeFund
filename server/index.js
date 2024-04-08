@@ -4,8 +4,6 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const stripe = require("./routes/stripe");
 const products = require("./products");
-const userRouter = require("./routes/user");
-const cookieParser = require("cookie-parser");
 const path = require("path");
 const app = express();
 
@@ -19,15 +17,6 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 app.use(express.static(path.join(__dirname + "/public")));
-// app.get("*", (req, res) => {
-//   res.sendFile(path.resolve(__dirname, "..","/client", "/build", "/index.html")); // relative path
-// });
-app.use(cookieParser());
-app.use("/auth", userRouter);
-
-mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/authentication"
-);
 
 app.use("/api/stripe", stripe);
 

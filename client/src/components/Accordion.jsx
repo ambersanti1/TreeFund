@@ -35,8 +35,6 @@ const Accordion = () => {
     { src: irrigationTrees, alt: "Irrigation Tech", content: "Help grow life!" },
     { src: reforestTrees, alt: "Reforest process", content: "Donate trees today!" },
     { src: plantationTrees, alt: "Plantation in process", content: "Help us plant!" },
-   
-
   ];
 
   return (

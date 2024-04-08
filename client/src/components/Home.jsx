@@ -1,65 +1,78 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import Checkout from "./Checkout";
 
 import Accordion from "./Accordion";
 import "../styles/Accordion.css";
-import Hero from "./Hero";
 import "../styles/Home.css";
-import "../styles/Header.css"
+import "../styles/Header.css";
+import "../styles/dashboard.css";
+
+import TreeHugerImage from "../Images/TreeHugerImage.webp";
+import NatureSaviorImage from "../Images/NatureSaviorImage.webp";
+import EvergreenEnthusiastImage from "../Images/EvergreenEnthusiastImage.webp";
+import NatureSupremacy from "../Images/Camping_family.webp";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLeaf } from "@fortawesome/free-solid-svg-icons";
 
+const imageMap = {
+  "Tree Huger": TreeHugerImage,
+  "Nature Savior": NatureSaviorImage,
+  "Evergreen Enthusiast": EvergreenEnthusiastImage,
+  "Nature Supremacy": NatureSupremacy,
+};
 
 function Home() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://treefund-b757cb53a6e1.herokuapp.com/products")
+      .then((response) => response.json())
+      .then((data) => setData(data))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
+
   return (
     <>
       <div className="header-container">
-        <h1>TreeFund</h1>
+        <h1>
+          TreeFund{" "}
+          <FontAwesomeIcon
+            icon={faLeaf}
+            style={{
+              color: "#25511f",
+              fontSize: "25px",
+            }}
+          />
+        </h1>
         <div className="header-btns">
-          <Link to="/login">
-            <button>
-              {" "}
-              Log in{" "}
-              <FontAwesomeIcon
-                icon={faLeaf}
-                style={{
-                  color: "#25511f",
-                  fontSize: "15px",
-                }}
-              />
-            </button>
-          </Link>
-          <Link to="/signup">
-            <button>
-              {" "}
-              Sign up{" "}
-              <FontAwesomeIcon
-                icon={faLeaf}
-                style={{
-                  color: "#25511f",
-                  fontSize: "15px",
-                }}
-              />
-            </button>
-          </Link>
+          <a href="#donate">
+            <button> Donate </button>
+          </a>
         </div>
       </div>
+
+      <div className="start-page">
+        <h2>Funding </h2>
+        <h2> for a greener </h2> <h2>Mexico</h2>
+      </div>
+
       <div className="content-container">
-        <h2>Planting today for a greener tomorrow</h2>
-        <p>
-          With your donation today, we'll make sure biodiversity in Mexico keeps
-          on thriving! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Laborum odit debitis libero et natus quae consequatur harum,
-          consequuntur itaque ipsam magni consectetur reiciendis, explicabo hic
-          aspernatur enim vero quia porro!
-        </p>
-
-        <Hero />
-
         <div className="join-donate-container">
+          <div className="donate">
+            <Link to="/login">
+              <h2>Donate now!</h2>
+              <p class="paragraph">
+                {" "}
+                Consider helping us fulfill our goal of 500 acres of trees
+                planted this month.{" "}
+              </p>
+            </Link>
+          </div>
           <div className="join">
-            <h2>Join the Reforestation Revolution</h2>
-            <p>
+            <h2>Be part of the green change in Mexico</h2>
+            <p class="paragraph">
               {" "}
               Embrace the power of unity and nature with TreeFund. Together, we
               can reforest the earth, one seedling at a time. Dive into a world
@@ -69,20 +82,37 @@ function Home() {
               generations.
             </p>
           </div>
-          <div className="donate">
-            <Link to="/login">
-              <h2>Donate now!</h2>
-              <p>
-                {" "}
-                Consider helping us fulfill our goal of 500 acres of trees
-                planted this month.{" "}
-              </p>
-            </Link>
-          </div>
         </div>
 
+        <section id = "donate"className="dash-container">
+          <div className="title-container">
+            <h2 className="color-brown join">JOIN THE</h2>
+            <br />
+            <h2>GREEN REVOLUTION</h2>
+            <br />
+          </div>
+
+          <div className="package-container">
+            <ul className="product-list">
+              {data.map((product) => (
+                <li key={product.id} className="product-card">
+                  <h3 className="product-name">{product.name}</h3>
+                  <img
+                    className="product-image"
+                    src={imageMap[product.name] || TreeHugerImage}
+                    alt={product.name}
+                  />
+                  <p className="product-price">${product.price} USD</p>
+                  <p className="product-description">{product.description}</p>
+                  <Checkout cartItems={[product]} />
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         <h2>Your Action, Natures Reaction</h2>
-        <p>
+        <p class="paragraph">
           Unlock the power of change with every tree you plant. Witness the
           transformation
         </p>

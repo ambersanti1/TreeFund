@@ -4,57 +4,64 @@
 }
 
 .title-container h2 {
-    color: #008000;
+    color: white;
     font-size: 80px; 
-    font-family: 'poppins-bold';
+    font-family: 'poppins-medium';
     line-height: 20px;
-    margin: 0 0 50px 50px;
 }
 .title-container .color-brown {
     color: #008000;
     font-size: 100px; 
-    font-family: 'poppins-bold';
+    margin: 0 0 0.5rem 0;
 }
 
 .dash-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items:center;
   height: auto;
-  background-color: rgba(0, 128, 0, 0.098);
   padding: 1rem 0 1rem 0;
+  border-radius: 5px;
 }
 
 .title-container {
-  margin-top: 10%;
-  width: 40%;
-  background-color: rgba(0, 128, 0, 0.098);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: green;
+  margin: 2rem 0 2rem 0;
+  border-radius: 5px;
 }
 
 .package-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 60%;
 }
 
 .package-container h2 {
-    color: green; 
-    font-size: 30px; 
-    margin: 0 0 1rem 0;
+  color: green; 
+  font-size: 30px; 
+  margin: 0 0 1rem 0;
+  font-family: 'poppins-light';
 } 
 .title-container .color-brown {
-  color: #49281f;
+  color: #4f310a;
 }
-
 
 .product-list {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
+  width: 1500px;
 }
 
 .product-card {
@@ -62,12 +69,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background-color:rgba(255, 255, 255, 0.678); 
-  border-radius: 15px; 
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1); 
-  width: 200px; 
+  border-radius: 5px; 
+  width: 300px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   height: 400px;
+    background-color: #E2FAB5;
 }
 
 .product-card.hover {
@@ -77,15 +83,15 @@
 
 .product-name {
   color: green; 
-  font-size: 18px; 
-  padding: 20px; 
+  font-size: 20px; 
+  padding: 10px; 
   margin: 0; 
   text-align: center; 
 }
 
 .product-image {
-  width: 150px;
-  height: 150px; 
+  width: 120px;
+  height: 120px; 
   object-fit: cover; 
   background-color: white; 
   border-radius: 20px;
@@ -93,16 +99,16 @@
 
 .product-description {
   font-size: 15px; 
-  padding: 10px 0 10px 0; 
   color: black; 
   margin: 0; 
+  text-align: center;
+  padding: 0 15px 0 15px;
 }
 
 .product-price {
-  font-size: 15px; 
-  font-weight: bold;
-  padding-bottom: 10px;
-  color: black; 
+  font-size: 25px; 
+  font-family: 'poppins-medium';
+  color: green; 
   margin: 0; 
 }
 
@@ -110,14 +116,15 @@
   display: flex;
   justify-content: center; 
   align-items: center;
-  width: 50%; 
-  height: 20px;
+  width: 40%; 
+  height: 40px;
   padding: 15px; 
   background-color: green; 
   color: white; 
   font-size: 15px; 
   border: none; 
   cursor: pointer; 
+  border-radius: 5px;
 }
 
 .product-card button:hover {
@@ -139,11 +146,12 @@
     align-items: center;
   }
   .title-container h2 {
-    font-size: 40px; 
+    font-size: 35px; 
     margin: 0;
   }
   .title-container .color-brown {
-      font-size: 60px; 
+    font-size: 55px; 
+    margin: 0;
   }
   .package-container {
     width: auto;
@@ -164,5 +172,6 @@
     flex-direction: column;
     justify-content: center;
     height: auto;
+    width: 370px;
   }
 }

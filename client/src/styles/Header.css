@@ -5,6 +5,8 @@
   justify-content: space-between;
   background-color: green;
   height: 80px;
+  position: fixed;
+  z-index: 11;
 }
 
 .header-container h1 {
@@ -16,9 +18,11 @@
 }
 .header-container button {
   width: 100px;
-  margin: 10px;
+  margin: 50px;
   font-size: 15px;
   cursor:pointer;
+  background-color: green;
+  border: none;
 }
 
 .header-container .header-btns {
@@ -46,11 +50,10 @@
 }
 .header-container a {
   text-decoration: none;
-  font-size: 10px;
 }
 .header-container button {
-  margin: 0 10px 0 0;
-  font-size: 12px;
+  margin: 0 20px 0 0;
+  font-size: 15px;
   width: 85px;
 }
 }
