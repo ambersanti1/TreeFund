@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import Checkout from "./Checkout";
 
@@ -61,14 +60,14 @@ function Home() {
       <div className="content-container">
         <div className="join-donate-container">
           <div className="donate">
-            <Link to="/login">
+            <a href="#donate">
               <h2>Donate now!</h2>
               <p class="paragraph">
                 {" "}
                 Consider helping us fulfill our goal of 500 acres of trees
                 planted this month.{" "}
               </p>
-            </Link>
+            </a>
           </div>
           <div className="join">
             <h2>Be part of the green change in Mexico</h2>
