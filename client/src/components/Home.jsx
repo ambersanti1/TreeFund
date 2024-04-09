@@ -86,10 +86,7 @@ function Home() {
 
         <section id="donate" className="dash-container">
           <div className="title-container">
-            <h2 className="color-brown join">JOIN THE</h2>
-            <br />
-            <h2>GREEN REVOLUTION</h2>
-            <br />
+            <h2 >JOIN THE GREEN REVOLUTION</h2>
           </div>
 
           <div className="package-container">
@@ -114,7 +111,7 @@ function Home() {
         <h2>Your Action, Natures Reaction</h2>
         <p class="paragraph">
           Unlock the power of change with every tree you plant. Witness the
-          transformation
+          transformation. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias totam explicabo, autem incidunt in labore ea voluptate, odio quasi minima ipsam quas dignissimos placeat laboriosam maxime pariatur impedit corporis aspernatur.
         </p>
 
         <Accordion />

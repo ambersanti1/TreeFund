@@ -3,11 +3,11 @@
     background-image: 
     /* top, transparent red */
     linear-gradient(
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
     ),
     /* your image */
-    url('../Images/Hero_img.webp');
+    url('../Images/pexels-johannes-plenio-1632790.jpg');
     max-width: 100%;
     background-size: cover;
     background-repeat:no-repeat;
@@ -23,7 +23,7 @@
 .start-page h2 {
   font-size: 70px;
   text-align: center;
-  font-family: 'poppins-regular';
+  font-family: 'poppins-light';
 
 }
 

@@ -7,7 +7,7 @@
     color: white;
     font-size: 60px; 
     font-family: 'poppins-medium';
-    line-height: 20px;
+    margin-bottom: 20px;
 }
 .title-container .color-brown {
     color: #008000;
@@ -32,9 +32,10 @@
   align-items: center;
   width: 100%;
   background-color: green;
-  margin: 2rem 0 2rem 0;
+  margin: 1rem 0 1rem 0;
   border-radius: 5px;
   height: 150px;
+
 }
 
 .package-container{
@@ -74,7 +75,7 @@
   width: 300px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   height: 450px;
-  background-color: #E2FAB5;
+  background-color: #dde4da;
 }
 
 .product-card.hover {
