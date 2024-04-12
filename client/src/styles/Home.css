@@ -3,8 +3,8 @@
     background-image: 
     /* top, transparent red */
     linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      rgba(45, 116, 45, 0.3)
+      rgba(0, 0, 0, 0.5),
+      rgba(45, 116, 45, 0.5)
     ),
     /* your image */
     url('../Images/pexels-johannes-plenio-1632790.jpg');
