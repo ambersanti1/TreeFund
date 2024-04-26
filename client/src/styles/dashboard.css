@@ -59,6 +59,7 @@
 .product-list {
   list-style: none;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -75,7 +76,7 @@
   width: 300px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
   height: 450px;
-  background-color: #dde4da;
+  background-color: #fff;
 }
 
 .product-card.hover {

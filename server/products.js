@@ -23,7 +23,7 @@ const products = [
     description:
       "For nature lovers that are kings of the 12 trees kingdom",
     price: 40,
-  },
+  }
 ];
 
 module.exports = products;

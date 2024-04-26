@@ -2,7 +2,7 @@
   width: 100%;
   height: 100px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: green;
   height: 80px;
   z-index: 11;
@@ -24,8 +24,7 @@
   border: none;
   border-radius: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
 }
 
 .header-container .header-btns {
